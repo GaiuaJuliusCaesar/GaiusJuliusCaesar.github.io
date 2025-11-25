@@ -156,11 +156,32 @@
             gap: 15px;
             transition: all 0.3s;
             cursor: pointer;
+            position: relative;
+            text-decoration: none;
+            color: inherit;
         }
         
         .resource-item:hover {
             background: #e3f2fd;
             transform: translateX(5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .resource-item::after {
+            content: "\f35d";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .resource-item:hover::after {
+            opacity: 1;
         }
         
         .resource-icon {
@@ -408,7 +429,7 @@
                         <a href="#" style="color: var(--primary); text-decoration: none;">查看更多 <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="resources-grid">
-                        <div class="resource-item">
+                        <a class="resource-item" href="https://www.jjx.cn/jjyj/" target="_blank">
                             <div class="resource-icon">
                                 <i class="fas fa-book"></i>
                             </div>
@@ -416,8 +437,8 @@
                                 <h3>经济研究</h3>
                                 <p>国内顶级经济学期刊</p>
                             </div>
-                        </div>
-                        <div class="resource-item">
+                        </a>
+                        <a class="resource-item" href="http://www.mwm.com.cn/" target="_blank">
                             <div class="resource-icon">
                                 <i class="fas fa-book"></i>
                             </div>
@@ -425,8 +446,8 @@
                                 <h3>管理世界</h3>
                                 <p>管理类权威期刊</p>
                             </div>
-                        </div>
-                        <div class="resource-item">
+                        </a>
+                        <a class="resource-item" href="http://qje.oxfordjournals.org/" target="_blank">
                             <div class="resource-icon">
                                 <i class="fas fa-book"></i>
                             </div>
@@ -434,8 +455,8 @@
                                 <h3>经济学(季刊)</h3>
                                 <p>北京大学主办</p>
                             </div>
-                        </div>
-                        <div class="resource-item">
+                        </a>
+                        <a class="resource-item" href="http://www.jwe.org.cn/" target="_blank">
                             <div class="resource-icon">
                                 <i class="fas fa-book"></i>
                             </div>
@@ -443,7 +464,7 @@
                                 <h3>世界经济</h3>
                                 <p>国际经济学研究</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 
@@ -454,7 +475,7 @@
                         <a href="#" style="color: var(--primary); text-decoration: none;">查看更多 <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="resources-grid">
-                        <div class="resource-item">
+                        <a class="resource-item" href="https://www.cnki.net/" target="_blank">
                             <div class="resource-icon">
                                 <i class="fas fa-database"></i>
                             </div>
@@ -462,8 +483,8 @@
                                 <h3>中国知网(CNKI)</h3>
                                 <p>中文学术文献数据库</p>
                             </div>
-                        </div>
-                        <div class="resource-item">
+                        </a>
+                        <a class="resource-item" href="https://www.wanfangdata.com.cn/" target="_blank">
                             <div class="resource-icon">
                                 <i class="fas fa-database"></i>
                             </div>
@@ -471,8 +492,8 @@
                                 <h3>万方数据</h3>
                                 <p>综合性学术资源平台</p>
                             </div>
-                        </div>
-                        <div class="resource-item">
+                        </a>
+                        <a class="resource-item" href="https://www.webofscience.com/" target="_blank">
                             <div class="resource-icon">
                                 <i class="fas fa-database"></i>
                             </div>
@@ -480,8 +501,8 @@
                                 <h3>Web of Science</h3>
                                 <p>国际核心期刊数据库</p>
                             </div>
-                        </div>
-                        <div class="resource-item">
+                        </a>
+                        <a class="resource-item" href="https://www.jstor.org/" target="_blank">
                             <div class="resource-icon">
                                 <i class="fas fa-database"></i>
                             </div>
@@ -489,7 +510,7 @@
                                 <h3>JSTOR</h3>
                                 <p>西文过刊全文数据库</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 
@@ -500,7 +521,7 @@
                         <a href="#" style="color: var(--primary); text-decoration: none;">查看更多 <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="resources-grid">
-                        <div class="resource-item">
+                        <a class="resource-item" href="https://www.zotero.org/" target="_blank">
                             <div class="resource-icon">
                                 <i class="fas fa-toolbox"></i>
                             </div>
@@ -508,8 +529,8 @@
                                 <h3>Zotero</h3>
                                 <p>参考文献管理工具</p>
                             </div>
-                        </div>
-                        <div class="resource-item">
+                        </a>
+                        <a class="resource-item" href="https://www.overleaf.com/" target="_blank">
                             <div class="resource-icon">
                                 <i class="fas fa-toolbox"></i>
                             </div>
@@ -517,8 +538,8 @@
                                 <h3>Overleaf</h3>
                                 <p>在线LaTeX编辑器</p>
                             </div>
-                        </div>
-                        <div class="resource-item">
+                        </a>
+                        <a class="resource-item" href="https://www.stata.com/" target="_blank">
                             <div class="resource-icon">
                                 <i class="fas fa-toolbox"></i>
                             </div>
@@ -526,8 +547,8 @@
                                 <h3>Stata</h3>
                                 <p>计量经济学软件</p>
                             </div>
-                        </div>
-                        <div class="resource-item">
+                        </a>
+                        <a class="resource-item" href="https://www.r-project.org/" target="_blank">
                             <div class="resource-icon">
                                 <i class="fas fa-toolbox"></i>
                             </div>
@@ -535,7 +556,7 @@
                                 <h3>R/Python</h3>
                                 <p>数据分析和可视化</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 
@@ -610,8 +631,8 @@
                 <div class="card sidebar-card">
                     <h3 class="sidebar-title">快速链接</h3>
                     <ul class="footer-links">
-                        <li><a href="#">吉林大学图书馆</a></li>
-                        <li><a href="#">经济学院官网</a></li>
+                        <li><a href="https://lib.jlu.edu.cn/" target="_blank">吉林大学图书馆</a></li>
+                        <li><a href="http://econ.jlu.edu.cn/" target="_blank">经济学院官网</a></li>
                         <li><a href="#">研究生培养方案</a></li>
                         <li><a href="#">学术道德规范</a></li>
                         <li><a href="#">论文写作指南</a></li>
@@ -705,12 +726,14 @@
             }
         });
         
-        // 资源项点击效果
+        // 为没有链接的资源项添加提示
         document.querySelectorAll('.resource-item').forEach(item => {
-            item.addEventListener('click', function() {
-                const title = this.querySelector('h3').textContent;
-                alert(`您点击了: ${title}\n该功能正在开发中，敬请期待！`);
-            });
+            if (!item.getAttribute('href')) {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('该资源链接正在建设中，敬请期待！');
+                });
+            }
         });
     </script>
 </body>
